@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "identification-numerique"
+version = "1.0.0"
+description = "Identification Numérique Souveraine — Gestionnaire d'identité cryptographique, jetons d'accès zero-trust & authentification pour OS cognitifs et agents IA."
+readme = "README.md"
+authors = [{ name = "Franck Delmas (Turbo31150)" }]
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Security :: Cryptography"
+]
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+identite = "identification_numerique.cli:main"
+turbo-identite = "identification_numerique.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
